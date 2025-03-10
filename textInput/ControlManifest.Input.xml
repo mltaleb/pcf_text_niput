@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="MLTALEB" constructor="CustomTextInput" version="0.0.1" display-name-key="Custom text input" description-key="tableUI description" control-type="standard" >
+    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
+    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
+    Example1:
+      <external-service-usage enabled="true">
+        <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    Example2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+
+    <property name="LabelText" display-name-key="Label Text" description-key="Label for the input field" of-type="SingleLine.Text" usage="input"/>
+    <property name="labelFontSize" display-name-key="Label font size" description-key="Label fontzie" of-type="SingleLine.Text" usage="input"/>
+    <property name="inputType" display-name-key="Input Type" description-key="Type of input field (text, number, etc.)" of-type="SingleLine.Text" usage="input"/>
+    <property name="inputValue" display-name-key="Input Value" description-key="Value entered by the user" of-type="SingleLine.Text" usage="bound"/>
+
+    <!-- Style Properties -->
+    <property name="hintFontSize" display-name-key="Hint Font Size" description-key="Font size for hint text" of-type="SingleLine.Text" usage="input"/>
+    <property name="textFontSize" display-name-key="Text Font Size" description-key="Font size for input text" of-type="SingleLine.Text" usage="input"/>
+    <property name="textColor" display-name-key="Text Color" description-key="Color of input text" of-type="SingleLine.Text" usage="input"/>
+    <property name="labelColor" display-name-key="Label Color" description-key="Color of hint label" of-type="SingleLine.Text" usage="input"/>
+    <property name="borderColor" display-name-key="Border Color" description-key="Border color of input field" of-type="SingleLine.Text" usage="input"/>
+    <property name="focusBorderColor" display-name-key="Focus Border Color" description-key="Border color when input is focused" of-type="SingleLine.Text" usage="input"/>
+    <property name="backgroundColor" display-name-key="Background Color" description-key="Background color of input field" of-type="SingleLine.Text" usage="input"/>
+    <property name="borderRadius" display-name-key="Border Radius" description-key="Roundness of input corners" of-type="SingleLine.Text" usage="input"/>
+    <property name="padding" display-name-key="Padding" description-key="Padding inside input field" of-type="SingleLine.Text" usage="input"/>
+
+
+
+
+
+
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+  <resources>
+    <code path="index.ts" order="1"/>
+    <css path="customTextInput.css" order="2"/>
+  </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>

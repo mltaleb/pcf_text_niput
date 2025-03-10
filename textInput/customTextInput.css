@@ -1,0 +1,33 @@
+.custom-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #4b39ef;
+  box-shadow: 0 0 8px rgba(75, 57, 239, 0.4);
+}
+
+.custom-input-label {
+  position: absolute;
+  top: -10px; /* Position the label exactly on the border */
+  left: 16px;
+  background: white;
+  padding: 2px 6px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+  font-weight: 600;
+}
